@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+<hr>
+<br>
+<h1>Eng kop sahifali kitoblar</h1>
+<br>
+<hr>
+<br>
+{% for book in book3 %}
+    <h2>{{book.nom}},{{book.muallif}},//{{book.sahifa}}
+    {% endfor %}</h2>
+</body>
+</html>

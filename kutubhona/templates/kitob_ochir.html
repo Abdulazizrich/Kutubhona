@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+<hr>
+<br>
+<h1>Kitoblar ro'yhati</h1>
+<br>
+<hr>
+<br>
+{% for tm in stu %}
+    <h2><a href="/bitta_talaba/{{tm.id}}/">{{tm.ism}}</a>,{{tm.kurs}}
+    {% endfor %}</h2>
+</body>
+</html>

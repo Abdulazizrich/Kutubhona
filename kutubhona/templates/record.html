@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+<hr>
+<br>
+<h1>Hamma recordlar ro'yhati</h1>
+<br>
+<hr>
+<br>
+{% for record in records %}
+    <h2>{{record.talaba}},{{record.kitob}},{{record.kutubhonachi}}
+    {% endfor %}</h2>
+</body>
+</html>

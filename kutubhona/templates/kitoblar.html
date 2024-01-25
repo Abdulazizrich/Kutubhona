@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<br>
+<hr>
+<br>
+<h1>Hamma kitoblar ro'yhati</h1>
+<br>
+<hr>
+<br>
+{% for kitob in books %}
+    <h2><a href="/delete/{{kitob.id}}/">{{kitob.nom}}</a>,{{kitob.muallif.ism}}
+    {% endfor %}</h2>
+</body>
+</html>
