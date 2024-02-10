@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {%csrf_token%}
+     <label>Berilgan_sana:</label><br>
+    <input type="date" name="b_s" value="{{record.berilgan_sana}}"><br> <br>
+    <label>Qaytardi:</label><br>
+    <input type="checkbox" name="qaytardi" {% if record.qaytardi == True %} checked {% endif %}><br> <br>
+    <button type="submit">Tahrirlash</button>
+</body>
+</html>

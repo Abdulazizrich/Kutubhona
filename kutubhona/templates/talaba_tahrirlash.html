@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {%csrf_token%}
+    <label>Ism:</label><br>
+    <input type="text" name="ismi" value="{{talaba.ism}}"><br> <br>
+     <label>Kurs:</label><br>
+    <input type="number" name="k" value="{{talaba.kurs}}"><br> <br>
+     <label>Kitob_nomi:</label><br>
+    <input type="text" name="k_s" value="{{talaba.kitob_nomi}}"><br> <br>
+    <button type="submit">Tahrirlash</button>
+</form>
+</body>
+</html>

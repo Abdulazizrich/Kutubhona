@@ -14,7 +14,26 @@
 <br>
 {% for muallif in writers %}
     <h2>{{muallif.ism}},{{muallif.tugilgan_sana}}
+        <a href="/royhat/{{muallif.id}}/tahrirlash/"><button>Tahrirlash</button></a>
     {% endfor %}</h2>
+<br>
 
+<form method="post">{% csrf_token %}
+<!--    <label>Ismi: </label>-->
+<!--    <input type="text" name="ismi" placeholder="Muallif ismi">-->
+<!--     <label>Tug'ilgan sanasi: </label>-->
+<!--    <input type="date" name="t_s" placeholder="Tug'ilgan sana">-->
+<!--     <label>Kitoblari: </label>-->
+<!--    <input type="number" name="k_s" placeholder="Kitoblari soni" min="1">-->
+<!--    <label>Jinsi: </label>-->
+<!--    <select name="j">-->
+<!--        <option value="Erkak">Erkak</option>-->
+<!--        <option value="Ayol">Ayol</option>-->
+<!--    </select>-->
+<!--    <label>Tirik: </label>-->
+<!--    <input type="checkbox" name="t">-->
+     {{ form.as_p }}
+    <button>Qo'shish</button>
+</form>
 </body>
 </html>

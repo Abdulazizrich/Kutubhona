@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Recordlar</title>
 </head>
 <body>
 <br>
@@ -17,9 +17,10 @@
         <a href="/record/{{record.id}}/tahrirlash/"><button>Tahrirlash</button></a>
     {% endfor %}</h2>
 <br>
-<form method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <button>Qo'shish</button>
-</form>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Qo'shish</button>
+    </form>
 </body>
 </html>

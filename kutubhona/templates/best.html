@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
 <br>
 <hr>
 <br>
-<h1>Tirik kitob</h1>
+<h1>Baddiy kitoblar</h1>
 <br>
 <hr>
 <br>
-{% for tm in time %}
-    <h2>{{tm.nom}},{{tm.muallif}}
+{% for bd in badiiy %}
+    <h2>{{bd.nom}},{{bd.janr}}
     {% endfor %}</h2>
 </body>
 </html>

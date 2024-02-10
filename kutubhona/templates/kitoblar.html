@@ -15,5 +15,26 @@
 {% for kitob in books %}
     <h2><a href="/delete/{{kitob.id}}/">{{kitob.nom}}</a>,{{kitob.muallif.ism}}
     {% endfor %}</h2>
+<br>
+<form method="post">{% csrf_token %}
+    <label>Nomi: </label>
+    <input type="text" name="nomi" placeholder="Kitob nomi">
+     <label>Sahifa: </label>
+    <input type="number" name="s" placeholder="Sahifa soni" min="1">
+     <label>Janri: </label>
+    <select name="j">
+        <option value="Badiiy">Badiiy</option>
+        <option value="Ilmiy">Ilmiy</option>
+    </select>
+    <label>Muallif: </label>
+     <select name="m">
+         {% for muallif in mualliflar %}
+            <option value="{{muallif.id}}">{{ muallif.ism}}</option>
+         {% endfor %}
+
+    </select>
+    <button>Qo'shish</button>
+
+</form>
 </body>
 </html>

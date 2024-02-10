@@ -23,7 +23,7 @@ class Muallif(models.Model):
     ism = models.CharField(max_length=30)
     jins = models.CharField(max_length=30, choices=Jinslar)
     tugilgan_sana = models.DateTimeField(max_length=30)
-    kitoblar_soni = models.BigIntegerField(max_length=30)
+    kitoblar_soni = models.BigIntegerField()
     tirik = models.BooleanField(max_length=30)
 
     def __str__(self):
@@ -32,7 +32,7 @@ class Muallif(models.Model):
 class Kitob(models.Model):
     nom = models.CharField(max_length=30)
     janr = models.CharField(max_length=30)
-    sahifa = models.BigIntegerField(max_length=30)
+    sahifa = models.BigIntegerField()
     muallif = models.ForeignKey(Muallif, on_delete=models.CASCADE)
     def __str__(self):
         return f"{self.nom}   {self.janr}    {self.muallif}"
@@ -53,6 +53,4 @@ class Record(models.Model):
 
     def __str__(self):
         return f"{self.talaba}   {self.kitob}    {self.kutubhonachi}"
-
-
 

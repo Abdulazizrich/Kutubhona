@@ -7,20 +7,15 @@
 <body>
 <br>
 <hr>
-<form method="get">
-    <input name="ism"  type="text" placeholder="Talaba ismini yozing">
-    <button>Qidirish</button>
-</form>
 <br>
-<h1>Talabalar ro'yhati</h1>
+<h1>Hamma kutubhonachilarlar ro'yhati</h1>
 <br>
 <hr>
 <br>
-{% for tm in talabalar %}
-    <h2><a href="/bitta_talaba/{{tm.id}}/">{{tm.ism}}</a>,{{tm.kurs}} ,{{tm.kitob_nomi}}
-       <a href="/talabalar/{{tm.id}}/tahrirlash/"><button>Tahrirlash</button></a>
+{% for l in lib %}
+    <h2>{{l.ism}},{{l.ish_vaqti}}
+        <a href="/lib/{{l.id}}/tahrirlash/"><button>Tahrirlash</button></a>
     {% endfor %}</h2>
-
 <br>
 <form method="post">{% csrf_token %}
     {{ form.as_p }}
